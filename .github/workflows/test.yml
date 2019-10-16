@@ -21,6 +21,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm test
+        npm test-ci
+        npm run lint
       env:
         CI: true
