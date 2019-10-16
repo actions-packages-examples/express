@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [8.x, 10.x, 12.x]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest]
 
     steps:
     - uses: actions/checkout@v1
@@ -21,7 +21,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm test-ci
+        npm run test-ci
         npm run lint
       env:
         CI: true
